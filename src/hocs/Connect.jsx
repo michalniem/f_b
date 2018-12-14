@@ -1,12 +1,12 @@
-import React, { useReducer } from 'react';
+import React, { useContext } from 'react';
 
-import reducer, { initialState } from '../store/store';
+import StoreContext from '../context/StoreContext';
 
 function Connect(WrappedComponent) {
   return () => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const context = useContext(StoreContext);
     return (
-      <WrappedComponent store={{ state, dispatch }} />
+      <WrappedComponent {...context} />
     );
   };
 }

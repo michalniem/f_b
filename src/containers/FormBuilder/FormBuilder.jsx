@@ -17,14 +17,14 @@ const buttonStyles = {
   margin: '0 auto',
 };
 
-function FormBuilder({ store: { state, dispatch } }) {
+function FormBuilder() {
   return (
     <div style={formBuilderStyles}>
       <h1>FormBuilder</h1>
-      {state && state.map(form => (
+      {/* {state && state.map(form => (
         <Input {...form} key={form.question} />
       ))}
-      <button style={buttonStyles} onClick={() => dispatch({ type: 'ADD_INPUT' })}>Add Input</button>
+      <button style={buttonStyles} onClick={() => dispatch({ type: 'ADD_INPUT' })}>Add Input</button> */}
     </div>
   );
 }

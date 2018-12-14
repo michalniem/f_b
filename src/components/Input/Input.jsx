@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Field from '../Field/Field';
-import Connect from '../../hocs/Connect';
 
 const formStyles = {
   padding: '10px',
@@ -19,10 +18,6 @@ function Input({
   question,
   type,
   subInputs,
-  store: {
-    state,
-    dispatch,
-  }
 }) {
   return (
     <div style={formStyles}>
@@ -32,7 +27,7 @@ function Input({
       {subInputs && subInputs.map(subInput => (
         <Input {...subInput} />
       ))}
-      <button style={buttonStyles} onClick={() => dispatch({ type: 'ADD_INPUT' })}>Add Input</button>
+      {/* <button style={buttonStyles} onClick={() => dispatch({ type: 'ADD_INPUT' })}>Add Input</button> */}
     </div>
   );
 }
@@ -46,4 +41,4 @@ Input.propTypes = {
   ).isRequired,
 };
 
-export default Connect(Input);
+export default Input;
