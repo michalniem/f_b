@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import WithAuth from '../../hocs/WithAuth';
+import WithFirebase from '../../hocs/WithFirebase';
 
 const Form = ({ createNewUser }) => {
   const [values, setValues] = useState({ userEmail: '', userPassword: '' });
@@ -38,4 +38,4 @@ const Form = ({ createNewUser }) => {
   );
 };
 
-export default WithAuth(Form);
+export default WithFirebase(Form);
