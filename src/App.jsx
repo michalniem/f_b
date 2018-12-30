@@ -1,11 +1,11 @@
 import React from 'react';
 
-import FormBuilder from './containers/FormBuilder/FormBuilder';
+import Form from './containers/Form/Form';
 
-const App = () => (
-  <div>
-    <FormBuilder />
-  </div>
-);
+const App = () => {
+  return (
+    <Form />
+  );
+};
 
 export default App;
