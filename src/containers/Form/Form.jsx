@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import WithFirebase from '../../hocs/WithFirebase';
+import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 
-const Form = ({ createNewUser }) => {
+import firebaseContext from '../../context/firebaseContext';
+
+const Form = () => {
   const [values, setValues] = useState({ userEmail: '', userPassword: '' });
+  const { createNewUser } = useContext(firebaseContext);
 
   const handleChange = (name, value) => {
     setValues({ ...values, [name]: value });
@@ -38,4 +41,4 @@ const Form = ({ createNewUser }) => {
   );
 };
 
-export default WithFirebase(Form);
+export default Form;

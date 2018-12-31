@@ -9,3 +9,5 @@ export {
   FirebaseProvider,
   FirebaseConsumer,
 };
+
+export default firebaseContext;

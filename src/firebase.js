@@ -17,6 +17,14 @@ class Firebase {
   createNewUser = (userEmail, userPassword) => {
     this.auth.createUserWithEmailAndPassword(userEmail, userPassword);
   };
+
+  signIn = (userEmail, userPassword) => {
+    this.auth.signInWithEmailAndPassword(userEmail, userPassword);
+  };
+
+  onAuthStateChanged = (callback) => {
+    this.auth.onAuthStateChanged(callback);
+  }
 }
 
 export default Firebase;
