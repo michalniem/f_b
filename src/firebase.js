@@ -25,6 +25,10 @@ class Firebase {
   onAuthStateChanged = (callback) => {
     this.auth.onAuthStateChanged(callback);
   }
+
+  singOut = () => {
+    this.auth.signOut();
+  }
 }
 
 export default Firebase;

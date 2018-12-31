@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Form from './containers/Form/Form';
-import User from './components/User';
+import SignOut from './components/SignOut';
 import WithAuthUser from './hocs/WithAuthUser';
 
 const App = () => (
   <div>
     <Form />
-    <User />
+    <SignOut />
   </div>
 );
 
